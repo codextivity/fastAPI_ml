@@ -29,7 +29,7 @@ jobs:
 
       - name: Deploy to Render
         env:
-          RENDER_API_KEY: ${{secret.rnd_N83YDqNsk1GzZB38mrvFK0d566PW}}
+          RENDER_API_KEY: ${{secrets.rnd_N83YDqNsk1GzZB38mrvFK0d566PW}}
         run: |
            curl -X POST "https://api.render.com/v1/services/srv-d20ui4be5dus7388tpc0/deploys" \
                -H "Authorization: Bearer $rnd_N83YDqNsk1GzZB38mrvFK0d566PW" \
