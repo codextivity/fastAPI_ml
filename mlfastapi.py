@@ -22,7 +22,7 @@ class SalaryPredictionRequest(BaseModel):
 
 @app.get('/')
 def home():
-    return {'text': 'Welcome to the Software Developer Salary Prediction'}
+    return {'text': 'Welcome to Codextivity. The Software Developer Salary Prediction. '}
 
 
 @app.get('/calculate_salary')

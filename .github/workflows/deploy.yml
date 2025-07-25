@@ -29,9 +29,10 @@ jobs:
 
       - name: Deploy to Render
         env:
-          RENDER_API_KEY: ${{secrets.rnd_N83YDqNsk1GzZB38mrvFK0d566PW}}
+          RENDER_API_KEY: ${{secrets.RENDER_API_KEY}}
+          SERVICE_ID: ${{secrets.SERVICE_ID}}
         run: |
-           curl -X POST "https://api.render.com/deploy/srv-d20ui4be5dus7388tpc0?key=CFYJ46D2zAk" \
-               -H "Authorization: Bearer $rnd_N83YDqNsk1GzZB38mrvFK0d566PW" \
-               -H "Content-Type: application/json" \
-               -d '{}'
+          curl -X POST "$SERVICE_ID" \
+              -H "Authorization: Bearer $RENDER_API_KEY" \
+              -H "Content-Type: application/json" \
+              -d '{}'
